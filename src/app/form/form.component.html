@@ -1,0 +1,61 @@
+<br><br><div class="container">
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label for="name1" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="name1" #name1 required>
+    </div>
+    <div class="col-md-6">
+      <label for="name2" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="name2" #name2>
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="pan" class="form-label">Pan Card Number</label>
+      <input type="password" class="form-control" id="pan">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Annual Salary</label>
+      <input type="number" class="form-control" id="inputAddress" placeholder="in ₹" #loanAmt>
+    </div>
+    <div class="col-md-2">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" class="form-control" id="age">
+    </div>
+    <div class="col-md-2">
+      <label for="collateral" class="form-label">Collateral</label>
+      <input type="text" class="form-control" id="collateral">
+    </div>
+    <div class="col-md-4">
+      <label for="tenure" class="form-label">Tenure of Repayment</label>
+      <select id="tenure" class="form-select">
+        <option selected>Choose...</option>
+        <option>6 months</option>
+        <option>12 months</option>
+        <option>2 years</option>
+        <option>5 years</option>
+        <option>10 years</option>
+
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="type" class="form-label">Type of Loan</label>
+      <select id="type" class="form-select">
+        <option selected>Choose...</option>
+        <option>Personal Loan</option>
+        <option>Home Loan</option>
+        <option>Car Loan</option>
+        <option>Bike Loan</option>
+        <option>Education Loan</option>
+      </select>
+    </div>
+
+    <div class="col-12" align="center">
+      <button class="btn btn-primary" (click)="btnClick(name1.value, name2.value, loanAmt.value)">Check my Eligibility</button>
+    </div>
+  </form>
+</div>
+<router-outlet></router-outlet>
